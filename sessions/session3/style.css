@@ -1,0 +1,140 @@
+
+/* tage name */
+/* h1{} */
+
+/* class name */
+/* .x{} */
+
+
+/* id name */
+/* #d{} */
+
+
+/* .app{
+    background-color: rgba(8, 96, 211, 0.265);
+}
+
+.tage{
+    background-color: blue;
+}
+
+#item{
+    background-color: blanchedalmond;
+}
+
+#tage{
+    background-color: green;
+} */
+
+/* .app{
+    background-color: blue;
+    color:red;
+} */
+
+/* .tage{
+    font-size: 50px;
+}
+
+#item{
+    font-size: 60px;
+} */
+
+/* .app{
+    background-color: gray;
+    color: white;
+
+    border-top: 3px solid rgb(70, 10, 10) ;
+    border-bottom: 3px double black;
+    border-left: 3px dashed rgb(0, 204, 255);
+    border-right: 3px dotted rgb(255, 0, 0);
+    
+    border: 3px solid black;
+} */
+
+/* .tage{
+    background-color: red;
+    border: 3px solid rgb(0, 255, 106);
+    outline: 3px dashed rgb(0, 0, 0);
+} */
+
+/* .app{
+    text-align:  start;
+    text-align:  center;
+    text-align:  end;
+} */
+
+.card{
+    background-color: gray;
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    /* border-radius: 30%; */
+    /* border-radius: 50%; */
+    /* border-radius: 80px 50px  80px 80px; */
+}
+
+#h{
+    background-color: gray;
+    /* text-align: center; */
+    line-height: 50px;
+    width: 500px;
+    /* height: 300px; */
+    /* margin: 200px 50px 50px 50px; */
+    margin-top: 200px;
+    margin-left: 100px;
+    padding: 50px;
+}
+
+
+.blok{
+    background-color: red;
+    display: inline-block;
+}
+/* 
+span{
+    display: block;
+    background-color: gray;
+    height: 30px;
+    display: inline-block;
+} */
+
+
+.k{
+    width: 300px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 200px;
+    border-radius: 20px;
+    box-shadow:0px 0px 20px 1px (0, 39, 165);
+    /* rotate: 50deg; */
+    scale:1.5;
+}
+
+/* h4{
+    text-decoration: line-through;
+
+    
+}
+h5{
+    text-decoration: underline;
+}
+h6{
+    
+    text-decoration: overline;
+}
+
+a{
+    text-decoration: none;
+} */
+
+
+h4{
+    font-weight:  700;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+span{
+    font-weight:inherit;
+}
+
+

@@ -1,0 +1,48 @@
+*{
+    overflow: hidden; /*  */
+    overflow: scroll; /*  */
+    overflow: auto; /*  */
+
+    transform: translate(50%, 50%);
+    
+    background-image: url(./); /*  */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: 50% 300px;  
+    background-attachment: fixed;
+    
+    background-image:linear-gradient(60deg,#ff0000, #008000, black) ;
+    
+    direction: rtl;
+
+    position: fixed;
+    
+    position: sticky;
+    
+    z-index: 2;
+    
+    position: relative; 
+    
+    position: absolute;
+    
+    visibility: hidden;
+    
+    box-sizing: border-box;
+    
+    cursor:pointer;
+
+    transition: all 1s;
+
+    opacity: .5 ;
+    
+}
+
+button:hover{
+    scale: 1.2;
+}
+
+input::placeholder{
+    color: black;
+    font-size: 20px;
+}

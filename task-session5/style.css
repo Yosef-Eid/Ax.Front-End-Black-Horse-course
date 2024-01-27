@@ -7,108 +7,296 @@
     font-family: sans-serif;
 }
 
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+
+
 .app{
     width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 0 100px 80px;
+    overflow: hidden;
+}
+
+.app .nav{
+    width: 70px;
+    height: 100vh;
+    background-color: #2e2e70;
+    z-index: 333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.app .nav #logo{
+    position: absolute;
+    top: 70px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.app .nav .icons{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    font-size: 50px;
+    color: white;
+
+    ion-icon{
+        cursor: pointer;
+        transition: all .2s;
+    }
+
+    ion-icon:hover{
+        opacity: .8;
+        scale: 1.1;
+
+    }
+}
+
+    
+.app .all{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+}
+.app .all .center{
+    width: 75%;
+    height: 100vh;
+    padding: 30px 3% ;
+    overflow: auto;
+    margin-bottom: 50px;
+}
+
+.app .all .center::-webkit-scrollbar{
+    width: 8px;
+    background-color: rgba(223, 223, 223, 0.642)
+}
+
+.app .all .center::-webkit-scrollbar-thumb{
+    background-color: rgba(75, 75, 75, 0.358);
+    border-radius: 20px;
+}
+.app .all .center .search{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px ;
+    border-radius: 50px;
+    background-color: rgba(223, 223, 223, 0.276);
+
+    input{
+        padding: 5px;
+        border-radius: 5px;
+        border: 0;
+        color: gray;
+        outline: none;
+    }
+}
+
+.app .center .cards{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:20px;
+}
+            
+.app .center .cards .card{
+    width: 45%;
+    height: 300px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 10px;
+    border: 1px solid #2e2e705a;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+
+    .circal{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border-top: 30px solid #2e2e70;
+        border-left: 30px solid rgb(160, 161, 176);
+        border-bottom: 30px solid rgb(71, 88, 242);
+        border-right: 30px solid #2e2e70;
+    }
+}    
+
+.app .center .tasksCard{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.app .center .tasksCard .task{
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #2e2e70e0;
+    
+    border: 1px solid rgba(0, 0, 0, 0.103);
+
+    .left, .right{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.app .side::-webkit-scrollbar{
+    width: 8px;
+    background-color: rgba(223, 223, 223, 0.642)
+}
+
+.app .side::-webkit-scrollbar-thumb{
+    background-color: rgba(75, 75, 75, 0.358);
+    border-radius: 20px;
+}
+
+.app .side{
+    min-width: 350px;
+    max-width: 350px;
+    height: 100vh;
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #2e2e70ea;
+
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.071);
+    margin-bottom: 70px;
+
+}
+
+.app .side .card{
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #ffffff4a;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.071);
     display: flex;
     justify-content: space-between;
-    padding-left:80px;
-    
-    
-/* nav */
-    .nav{
+    align-items: center;
+}
 
-        width: 80px;
-        height: 100%;
-        background-color: rgba(11, 11, 67, 0.74);
-        display: flex;
+@media screen  and (min-width:901px) and (max-width:1200px) {
+    
+    .app .all .center .cards{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .app .all .center .cards .card{
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    .app{
+        overflow: auto;
+    }
+
+    .all {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        position: relative;
+        width: 100%;
+        padding: 0;
+
+    }
+
+    .app .all .center{
+        width: 100%;
+    }
+
+    .app .all .center {
+        height: auto;
+    }
+
+    .all .center .cards .card{
+        width: 100%;
+    }
+
+    .app .all .side::-webkit-scrollbar{
+        height: 8px;
+    }
+    
+    .app .all .side{
+        min-width: 100%;
+        height: auto;
+
+        .card{
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:490px) {
+    
+    .app{
+        padding: 0; 
+    }
+
+    .app .all .center{
+        width: 100%;
+    }
+
+    .app .all .center .cards {
+        width: 100%;
+    }
+
+    .app .all .center .cards .card{
+        width:100%;
+    }
+
+    .app .nav{
+        width: 100%;
+        height: 60px;
         position: fixed;
-        top: 0;
-        left: 0;
+        top: calc(100% - 60px);
+        align-items: center;
+        justify-content: center;
 
         #logo{
-            position: absolute;
-            top: 70px;
-            color: wheat;
-            font-size: 30px;
-        
+            display: none;
         }
 
         .icons{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            font-size: 30px;
-            color: white;
-        }
+            flex-direction: row;
+            font-size: 40px;
 
-    }
-
-    .all{
-        width: 100%;
-        
-        display:flex;
-        justify-content: space-evenly;
-        align-items: center;
-
-        .center{
-            width: 75%;
-            /* height: 100%; */
-            padding: 30px 3% ;
-            
-
-            .search{
-                width: 100%;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 20px ;
-                border-radius: 50px;
-                background-color: rgba(223, 223, 223, 0.276);
-            }
-
-            .cards{
-                /* width: 100%; */
-                margin-top: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-                gap:20px;
-                /* padding: 0 5%; */
-            
-                .card1, .card2{
-                    width:40%;
-                    min-width: 350px;
-                    height: 300px;
-                    background-color: plum;
-                    border-radius: 10px;
-                }    
-
-            }
-        }
-
-        .side{
-            width: 25%;
-            height: 100%;
-            background-color: rgb(59, 101, 101);
-        
         }
     }
+    
+
 }
-
-@media screen and (min-width:400px) and (max-width:600px) {
-    .all{
-        visibility: hidden;
-    }
-}
-
-/* .side{
-    width: 300px;
-    height: 400px;
-    background-color: red;
-} */
